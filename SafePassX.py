@@ -9,6 +9,10 @@ from Crypto.Protocol.KDF import PBKDF2
 
 ctk.set_default_color_theme("green")
 
+# Global variables
+EMAIL_USER = ""  # enter your Gmail address here
+EMAIL_PASSWORD = ""  # enter your Gmail app password here
+
 #MySQL connection
 sql= mysql.connector.connect(
   host="localhost",
@@ -643,9 +647,9 @@ def main_application():
             #mailing OTP
             server=smtplib.SMTP("smtp.gmail.com",587)
             server.starttls()
-            server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
+            server.login(EMAIL_USER, EMAIL_PASSWORD)  # Use configured email credentials
             mail_msg="Your SafePassX email verification OTP is "+otp+'.'
-            server.sendmail("",global_mail,mail_msg)#first parameter is the gmail id through which email is to be sent
+            server.sendmail(EMAIL_USER, global_mail, mail_msg)  # Use configured email address
             server.quit()
             #print(otp)
             mail_verify=ctk.CTkToplevel(app_win)
@@ -1128,9 +1132,9 @@ def sign_in():
                         #mailing OTP
                         server=smtplib.SMTP("smtp.gmail.com",587)
                         server.starttls()
-                        server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
+                        server.login(EMAIL_USER, EMAIL_PASSWORD)  # Use configured email credentials
                         mail_msg="Your SafePassX email verification OTP is "+otp+'.'
-                        server.sendmail("",cust_email,mail_msg)#first parameter is the gmail id through which email is to be sent
+                        server.sendmail(EMAIL_USER, cust_email, mail_msg)  # Use configured email address
                         server.quit()
                         #print(otp)
                         mail_verify=ctk.CTkToplevel(creation)
@@ -1440,9 +1444,9 @@ def sign_in():
                         #mailing OTP
                         server=smtplib.SMTP("smtp.gmail.com",587)
                         server.starttls()
-                        server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
+                        server.login(EMAIL_USER, EMAIL_PASSWORD)  # Use configured email credentials
                         mail_msg="Your SafePassX email verification OTP is "+otp+'.'
-                        server.sendmail("",cust_mail,mail_msg)#first parameter is the gmail id through which email is to be sent
+                        server.sendmail(EMAIL_USER, cust_mail, mail_msg)  # Use configured email address
                         server.quit()
                         #print(otp)
                         mail_verify=ctk.CTkToplevel(login)
@@ -1725,9 +1729,9 @@ def sign_in():
                                     #mailing OTP
                                     server=smtplib.SMTP("smtp.gmail.com",587)
                                     server.starttls()
-                                    server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
+                                    server.login(EMAIL_USER, EMAIL_PASSWORD)  # Use configured email credentials
                                     mail_msg="Your SafePassX email verification OTP is "+otp+'.'
-                                    server.sendmail("",global_mail,mail_msg)#first parameter is the gmail id through which email is to be sent
+                                    server.sendmail(EMAIL_USER, global_mail, mail_msg)  # Use configured email address
                                     server.quit()
                                     #print(otp)
                                     mail_verify=ctk.CTkToplevel(login)
