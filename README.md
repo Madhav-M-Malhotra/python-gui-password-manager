@@ -45,17 +45,30 @@ pip install customtkinter mysql-connector-python pycryptodome pyperclip pillow
 
 3. **Set up MySQL**:
    - Install MySQL Server if not already installed
-   - Configure MySQL with your credentials
-   - Update the MySQL connection details in `SafePassX.py`:
+   - Create a MySQL user or use the default root user
+   - Update the MySQL credentials in `SafePassX.py`:
      ```python
      sql = mysql.connector.connect(
          host="localhost",
-         user="root",
-         passwd="your_password"
+         user="root",  # Change if using a different user
+         passwd=""     # Add your MySQL password here
      )
      ```
 
-4. **Run the application**:
+4. **Configure Email Settings**:
+   - The application uses Gmail for sending OTP verification emails
+   - You need to set up your Gmail credentials in `SafePassX.py`:
+     ```python
+     EMAIL_USER = ""  # Add your Gmail address
+     EMAIL_PASSWORD = ""  # Add your Gmail app password
+     ```
+   - To get a Gmail app password:
+     1. Enable 2-Step Verification in your Google Account
+     2. Go to Security → App Passwords
+     3. Generate a new app password for "Mail"
+     4. Use this generated password as EMAIL_PASSWORD
+
+5. **Run the application**:
 ```bash
 python SafePassX.py
 ```
@@ -133,4 +146,4 @@ This password manager is designed for **local system use only**. Please note:
 
 > 🔐 _Developed as a part of the CSE100 - Fundamentals of Computer Programming course project._
 > 
-> 👨‍💻 **Developer**: [Madhav Malhotra]
+> 👨‍💻 **Developer**: Madhav Malhotra
