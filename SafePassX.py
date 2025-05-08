@@ -16,8 +16,8 @@ sql= mysql.connector.connect(
   passwd=""#enter your mysql password
 )
 my_con = sql.cursor()
-my_con.execute("Create database if not exists safepass")
-my_con.execute("Use safepass")
+my_con.execute("Create database if not exists safepassX")
+my_con.execute("Use safepassX")
 my_con.execute("create table if not exists user_info(email varchar(1000),masterpass varchar(1000),status int)")
 sql.commit()
 
@@ -37,13 +37,13 @@ def main_application():
     global global_mail
     global global_pass
     app_win=ctk.CTk()
-    app_win.title("SafePass")
+    app_win.title("SafePassX")
     app_win.geometry("700x346")
 
     topframe=ctk.CTkFrame(master=app_win,width=710,height=80,corner_radius=0,fg_color="green")
     topframe.place(x=0,y=0)
 
-    logo=ctk.CTkLabel(master=topframe, text="SafePass",font=('Agency FB',62,'bold'),text_color="white")
+    logo=ctk.CTkLabel(master=topframe, text="SafePassX",font=('Agency FB',62,'bold'),text_color="white")
     logo.place(x=250,y=0)
 
     def add_pass():
@@ -644,7 +644,7 @@ def main_application():
             server=smtplib.SMTP("smtp.gmail.com",587)
             server.starttls()
             server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
-            mail_msg="Your SafePass email verification OTP is "+otp+'.'
+            mail_msg="Your SafePassX email verification OTP is "+otp+'.'
             server.sendmail("",global_mail,mail_msg)#first parameter is the gmail id through which email is to be sent
             server.quit()
             #print(otp)
@@ -1070,7 +1070,7 @@ def main_application():
 def sign_in():
     #log-in window
     login=ctk.CTk()
-    login.title("SafePass")
+    login.title("SafePassX")
     login.geometry("580x440")
 
     #Creating an account
@@ -1129,7 +1129,7 @@ def sign_in():
                         server=smtplib.SMTP("smtp.gmail.com",587)
                         server.starttls()
                         server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
-                        mail_msg="Your SafePass email verification OTP is "+otp+'.'
+                        mail_msg="Your SafePassX email verification OTP is "+otp+'.'
                         server.sendmail("",cust_email,mail_msg)#first parameter is the gmail id through which email is to be sent
                         server.quit()
                         #print(otp)
@@ -1441,7 +1441,7 @@ def sign_in():
                         server=smtplib.SMTP("smtp.gmail.com",587)
                         server.starttls()
                         server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
-                        mail_msg="Your SafePass email verification OTP is "+otp+'.'
+                        mail_msg="Your SafePassX email verification OTP is "+otp+'.'
                         server.sendmail("",cust_mail,mail_msg)#first parameter is the gmail id through which email is to be sent
                         server.quit()
                         #print(otp)
@@ -1726,7 +1726,7 @@ def sign_in():
                                     server=smtplib.SMTP("smtp.gmail.com",587)
                                     server.starttls()
                                     server.login('','')#first parameter is the gmail id through which email is to be sent and second is the google app password for the id
-                                    mail_msg="Your SafePass email verification OTP is "+otp+'.'
+                                    mail_msg="Your SafePassX email verification OTP is "+otp+'.'
                                     server.sendmail("",global_mail,mail_msg)#first parameter is the gmail id through which email is to be sent
                                     server.quit()
                                     #print(otp)
