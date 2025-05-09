@@ -144,6 +144,6 @@ This password manager is designed for **local system use only**. Please note:
 
 ---
 
-> 🔐 _Developed as a part of the CSE100 - Fundamentals of Computer Programming course project._
+> 📚 _Developed as a part of the CSE100 - Fundamentals of Computer Programming course project._
 > 
 > 👨‍💻 **Developer**: Madhav Malhotra
