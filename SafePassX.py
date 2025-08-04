@@ -34,7 +34,7 @@ reset_show_pass_flag=0
 add_show_pass_flag=0
 show_pass_flag=0
 edit_show_pass_flag=0
-salt=b'\xd7q\x989C\xc4o0y\xd2mJ*6\xdf\x02\xcc\xdes\xe1\xa86f\x9a\xa0\xe5+cT\x05\xafq'
+salt=''#add your own salt
 
 #Main App
 def main_application():
