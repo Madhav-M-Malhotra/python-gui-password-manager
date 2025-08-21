@@ -103,7 +103,17 @@ python SafePassX.py
 
 ## 📸 Screenshots (UI Preview)
 
-*Coming soon...*
+| Login | Create Account | Home |
+|---|---|---|
+| ![Login](assets/Login.png) | ![Create Account](assets/CreateAccount.png) | ![Home](assets/HomePage.png) |
+
+| Add Password | Edit Password | Delete Password |
+|---|---|---|
+| ![Add Password](assets/AddPwd.png) | ![Edit Password](assets/EditPwd.png) | ![Delete Password](assets/DeletePwd.png) |
+
+| Stored Passwords | Account Info |
+|---|---|
+| ![Stored Passwords](assets/StoredPwds.png) | ![Account Info](assets/AccountInfo.png) |
 
 ## 📌 Features Snapshot
 
