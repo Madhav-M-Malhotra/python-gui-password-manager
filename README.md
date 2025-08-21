@@ -106,9 +106,9 @@ python SafePassX.py
 |---|---|---|
 | ![Add Password](assets/AddPwd.png) | ![Edit Password](assets/EditPwd.png) | ![Delete Password](assets/DeletePwd.png) |
 
-| Stored Passwords | Account Info |
+| Stored Passwords | My Account |
 |---|---|
-| ![Stored Passwords](assets/StoredPwds.png) | ![Account Info](assets/AccountInfo.png) |
+| ![Stored Passwords](assets/StoredPwds.png) | ![My Account](assets/AccountInfo.png) |
 
 ## 📌 Features Snapshot
 
